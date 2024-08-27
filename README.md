@@ -18,6 +18,22 @@
     
 <p>Class Mahasiswa : class ini memiliki tiga Property atau atributte yaitu $nama, $nim, $jurusan.</p>
 
+<p>Metode tampilkanData</p>
+
+//method atau fungsi untuk tampil data
+     public function tampilkanData(){
+        return "Nama: $this->nama , Nim: $this->nim, Jurusan: $this->jurusan";
+    }
+
+  <p>metode ini digunakan untuk menampilkan data</p>
+
+  <p>instansiasi object</p>
+
+  $mahasiswa = new Mahasiswa();
+
+  <p>Object : $mahasiswa adalah objek yang merupakan instansiasi dari kelas mahasiswa.</p>
+  
+
 <h3>Property atau Atributte</h3>
 
     public $nama; //aksesbilitas PUBLIC dapat diakses dari mana saja
