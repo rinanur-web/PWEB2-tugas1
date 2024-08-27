@@ -7,21 +7,24 @@ class Mahasiswa {
     public $nim;
     public $jurusan;
 
-    //constructor
+    //constructor untuk menginisialisasi atribut atau preoperty
     public function  __construct($nama, $nim, $jurusan){
         $this->nama = $nama;
         $this->nim = $nim;
         $this->jurusan = $jurusan;
     }
 
+    //method atau fungsi untuk tampil data
     public function tampilkanData(){
         return "Nama: $this->nama , Nim: $this->nim, Jurusan: $this->jurusan";
     }
 
+    //method atau fungsi untuk setter nim
     public function setNim($nimBaru){
         $this->nim = $nimBaru;
     }
 
+    //method atau fungsi untuk mengupdate jurusan
     public function updateJurusan($jurusanNew){
         $this->jurusan = $jurusanNew;
     }
@@ -34,7 +37,9 @@ $mahasiswa->tampilkanData();
 //untuk menset nilai property ($nama_object->nama_property=nilai)
 $mahasiswa->setNim("123");
 
+//untuk mengupdate jurusan
 $mahasiswa->updateJurusan("ti");
 
-echo $mahasiswa->tampilkanData();
+//menampilakan hasil atau output
+echo $mahasiswa->tampilkanData(); //output: Nama: rina , Nim: 123, Jurusan: ti
 ?>
