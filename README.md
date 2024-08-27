@@ -20,7 +20,7 @@
 
 <p>Metode tampilkanData</p>
 
-//method atau fungsi untuk tampil data
+      //method atau fungsi untuk tampil data
      public function tampilkanData(){
         return "Nama: $this->nama , Nim: $this->nim, Jurusan: $this->jurusan";
     }
@@ -29,12 +29,23 @@
 
   <p>instansiasi object</p>
 
-  $mahasiswa = new Mahasiswa();
+    $mahasiswa = new Mahasiswa();
 
   <p>Object : $mahasiswa adalah objek yang merupakan instansiasi dari kelas mahasiswa.</p>
+
+    $mahasiswa->nama = "rina";
+    $mahasiswa->nim = "$mahasiswa = new Mahasiswa();230102021";
+    $mahasiswa->jurusan = "jkb";
+
+  <p>Pada objek yang baru dibuat yaitu $mahasiswa memberikan nilai atau value pada setiap property yang ada pada kelas mahasiswa</p>
+
+    //menampilkan isi hasil data dari method tampilkanData
+    echo $mahasiswa->tampilkanData();
+
+  <p>Kode ini untuk menampilkan data yang ada atau data yang sudah diberikan pada objek diatas.</p>
   
 
-<h3>Property atau Atributte</h3>
+<h4>2. Implementasi Constructor</h4>
 
     public $nama; //aksesbilitas PUBLIC dapat diakses dari mana saja
     public $nim;
