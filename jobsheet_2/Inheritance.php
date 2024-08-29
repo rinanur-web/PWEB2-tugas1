@@ -1,6 +1,7 @@
 <?php
 //definisi class 
 class Pengguna {
+    //property nama
     protected $nama; // Dapat diakses oleh kelas itu sendiri dan kelas turunan.
      
     //construct untuk menginisialisasi property
@@ -8,22 +9,31 @@ class Pengguna {
         $this->nama = $nama;
     }
 
-    //method untuk menampilkan nama pengguna
+    //method untuk mendapatkan nilai property nama 
     public function getNama(){
         return $this->nama;
     }
 }
-
+//class Dosen yang mewarisi dari class Pengguna
 class Dosen extends Pengguna {
-    private $mataKuliah;
+    private $mataKuliah; //property matakuliah yang private
      
+    //construct untuk menginisialisasi property nama dan matakuliah
     public function __construct($nama, $mataKuliah){
+        //menginisialisasi property nama dari class Pengguna
         parent::__construct($nama);
         $this->mataKuliah = $mataKuliah;
     }
+
+    //Metode untuk mendapatkan mata kuliah
+    public function getMataKuliah(){
+        return $this->mataKuliah;
+    }
 }
-//instansiasi objek
+//instansiasi objek class Dosen
 $dosen1 = new Dosen("Rina Nur Rohmah", "P Web 2");
-echo $dosen1->getNama();
+//mengakses property nama dan matakuliah
+echo $dosen1->getNama() . "<br>"; //Menampilkan Output : Rina Nur Rohmah
+echo $dosen1->getMataKuliah(); //Menampilkan Output : P Web 2
 
 ?>

@@ -44,13 +44,14 @@ class Mahasiswa {
 }
 //instansiasi objek dari class mahasiswa
 $mahasiswa1 = new Mahasiswa ("Rina Nur Rohmah", "230102021", "komputer dan bisnis");
-//mengakses property menggunakan getter
-echo $mahasiswa1->getNama() . "<br>";
-echo $mahasiswa1->getNim() . "<br>";
-echo $mahasiswa1->getJurusan() . "<br>";
 
 //mengubah nilai property menggunakan setter
 echo $mahasiswa1->setNama("Nur");
 echo $mahasiswa1->setNim("2021");
 echo $mahasiswa1->setJurusan("komputer");
+
+//mengakses property menggunakan getter
+echo $mahasiswa1->getNama() . "<br>";
+echo $mahasiswa1->getNim() . "<br>";
+echo $mahasiswa1->getJurusan() . "<br>";
 ?>

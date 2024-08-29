@@ -6,7 +6,7 @@ class Dosen {
     public $nama;
     public $nip; //aksesbilitas PUBLIC dapat diakses dari mana saja
     public $mataKuliah;
-
+ 
      //constructor untuk menginisialisasi atribut atau property
     public function __construct($nama, $nip, $mataKuliah){
         $this->nama = $nama;

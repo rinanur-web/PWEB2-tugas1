@@ -1,37 +1,57 @@
 <?php
+//definisi class Pengguna
 class Pengguna {
+    protected $nama; //property protected untuk nama
 
-    public function __construct(){
+    //constructor untuk menginisialisasi nama
+    public function __construct($nama){
+        $this->nama = $nama;
     }
-    //implementasi metode aksesFitur
+
+    //metode aksesFitur 
     public function aksesFitur(){
-        return "akses web";
+        return $this->nama;
     }
 }
-
+//class Dosen yang mewarisi class Pengguna
 class Dosen extends Pengguna {
-    public function __construct(){
+    private $matkul; //property matkul yang private
+
+    //constructor untuk menginisialisasi matkul dan nama
+    public function __construct ($nama, $matkul){
+        $this->nama = $nama;
+        $this->matkul = $matkul;
     }
+
     //implementasi metode aksesFitur
     public function aksesFitur(){
-        return "Fitur Masukan Nilai";
+        return "Dosen $this->nama mengajar $this->matkul";
     }
 }
-
+//class Mahasiswa yang mewarisi class Pengguna
 class Mahasiswa extends Pengguna {
-    public function __construct(){
+    private $studentID; //property studentID yang private
+   
+    //constructor untuk menginisialisasi studentID dan nama
+    public function __construct ($nama, $studentID){
+        $this->nama = $nama;
+        $this->studentID = $studentID;
     }
+
     //implementasi metode aksesFitur
     public function aksesFitur(){
-        return "Fitur lihat nilai";
+        return "Nama $this->nama dengan ID $this->studentID ";
     }
 }
 
 // instansi objek dari class dosen dan mahasiswa
-$tampil = [new Pengguna(), new Dosen(), new Mahasiswa()];
-foreach ($tampil as $lihat){
-    echo $lihat->aksesFitur();
-    echo "<br>";
-}
+$dosen = new Dosen("yuyu", "rpl");
+$mahasiswa = new Mahasiswa("roro", "321");
+
+//pemanggilan metode aksesFitur
+echo $dosen->aksesFitur() . "<br>"; //Menampilkan Output dosen
+echo $mahasiswa->aksesFitur(); //menampilkan output mahasiswa
+
+
 
 ?>

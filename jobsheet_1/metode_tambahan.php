@@ -19,8 +19,8 @@ class Mahasiswa {
         return "Nama: $this->nama , Nim: $this->nim, Jurusan: $this->jurusan";
     }
 
-     //method atau fungsi untuk mengupdate jurusan
-     public function updateJurusan($jurusanNew){
+    //method atau fungsi untuk mengupdate jurusan
+    public function updateJurusan($jurusanNew){
         $this->jurusan = $jurusanNew;
     }
 }
@@ -29,7 +29,6 @@ $mahasiswa = new Mahasiswa("rina", "230102021", "jkb");
 
 //untuk mengupdate jurusan 
 $mahasiswa->updateJurusan("ti");
-
 
 //menampilkan isi hasil data dari method tampilkanData
 echo $mahasiswa->tampilkanData();
