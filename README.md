@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # PWEB 2
 # Modul 1
  <h3>Jobsheet 1</h3>
