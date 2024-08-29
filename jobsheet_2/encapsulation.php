@@ -34,24 +34,31 @@ class Mahasiswa {
 
     //metode setter untuk nim
     public function setNim($nim){
-        $this->nama = $nim;
+        $this->nim = $nim;
     }
 
     //metode setter untuk jurusan
     public function setJurusan($jurusan){
-        $this->nama = $jurusan;
+        $this->jurusan = $jurusan;
     }
 }
-//instansiasi objek dari class mahasiswa
+// instansiasi objek dari class mahasiswa
 $mahasiswa1 = new Mahasiswa ("Rina Nur Rohmah", "230102021", "komputer dan bisnis");
 
-//mengubah nilai property menggunakan setter
-echo $mahasiswa1->setNama("Nur");
-echo $mahasiswa1->setNim("2021");
-echo $mahasiswa1->setJurusan("komputer");
+//Menampilkan data awal dengan memanggil metode getter 
+echo "Data Awal : \n<br>";
+echo "Mahasiswa: " . $mahasiswa1->getNama() . "<br>";
+echo "NIM: " . $mahasiswa1->getNim() . "<br>";
+echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br>";
 
-//mengakses property menggunakan getter
-echo $mahasiswa1->getNama() . "<br>";
-echo $mahasiswa1->getNim() . "<br>";
-echo $mahasiswa1->getJurusan() . "<br>";
+//mengubah data dengan metode setter
+$mahasiswa1->setNama("rara");
+$mahasiswa1->setNim("23456");
+$mahasiswa1->setJurusan("Teknik Informatika");
+
+//menampilkan data yang sudah diubah dengan metode getter
+echo "<br>\nData Setelah Diubah : \n<br>";
+echo "Mahasiswa: " . $mahasiswa1->getNama() . "<br>";
+echo "NIM: " . $mahasiswa1->getNim() . "<br>";
+echo "Jurusan: " . $mahasiswa1->getJurusan() . "<br>";
 ?>

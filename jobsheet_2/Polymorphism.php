@@ -51,7 +51,4 @@ $mahasiswa = new Mahasiswa("roro", "321");
 //pemanggilan metode aksesFitur
 echo $dosen->aksesFitur() . "<br>"; //Menampilkan Output dosen
 echo $mahasiswa->aksesFitur(); //menampilkan output mahasiswa
-
-
-
 ?>

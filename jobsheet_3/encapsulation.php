@@ -36,7 +36,7 @@ $student = new Student("tutu", "345");
 
 // Mengakses data melalui metode getter
 echo $student->getName() . "<br>";
-echo $student->getStudentID();
+echo $student->getStudentID() . "<br>";
 
 // Mengubah data melalui metode setter
 $student->setName("rara");
